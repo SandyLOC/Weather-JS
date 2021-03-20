@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<!-- -->
+<head>
+  <title>Weather App</title>
+  <meta charset="UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link href="src/styles.css" rel="stylesheet" type="text/css"/>
+  <script src="https://kit.fontawesome.com/674d0bd5db.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card principal">
+      <div class="row">
+        <div class="col-sm-9">
+
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input class="form-control" placeholder="Enter a city...">
+                </div>
+                <div class="col">
+                  <button type="submit" class="search">Search</button>
+                </div>
+                <div class="col">
+                  <button type="submit" class="current">Current</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-7">
+              <div>
+                <h1 class="city" id=#city>Search...</h1>
+                <h2 class="day"></h2>
+              </div>
+              <div class="card" id="precipitation">
+                <div class="card-body">
+                  <p class="precipitation">Precipitation: 0%</p>
+                  <p class="wind">Wind: 0 Km/h</p>
+                  <p class="humid">Humidity: 0%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="clearfix">
+                <span class="today" id=#today>0</span>
+                <span>
+                  <a href="#" ><p id="celcius">°C |</p><p id="fahrenheit"> °F</p></a>
+                  <h1><i class="fas fa-cloud-sun emoji"></i>
+                </span>
+              </div>    
+            </div>
+          </div>
+        </div>
+
+        <div class="col popular">
+          <ul>
+            <li>New York</li>
+            <li>Shanghai</li>
+            <li>Sidney</li>
+            <li>Paris</li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="card other-days">
+      <div class="card-footer">
+        <div class="row">
+          <div class="col">Mon </br><i class="fas fa-cloud-sun-rain"></i>
+            <p class="degrees">17°C</p>
+          </div>
+          <div class="col">Tue </br><i class="fas fa-cloud-sun"></i>
+            <p class="degrees">16°C</p>
+          </div>
+          <div class="col">Wed </br><i class="fas fa-sun"></i>
+            <p class="degrees">19°C</p>
+          </div>
+          <div class="col">Thu </br><i class="fas fa-sun"></i>
+            <p class="degrees">21°C</p>
+          </div>
+          <div class="col">Fri </br><i class="fas fa-sun"></i>
+            <p class="degrees">21°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   </div>
+   </div>
+   <script src="src/time.js"></script>
+  <script src="src/index.js"></script>
+</body>
+
+</html>

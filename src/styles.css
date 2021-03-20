@@ -1,0 +1,81 @@
+body {
+    color: #22afb7;
+  }
+  form {
+    margin: 10px 0px 0px;
+  }
+  button {
+    color: rgb(34, 175, 183, 1);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(34, 175, 183, 0.3);
+    border: rgb(34, 175, 183, 0.8);
+    border-radius: 5px;
+    height: 90%;
+    margin-top: 2px;
+    padding: 5px 20px;
+  }
+  a {
+    font-size: 20px;
+    margin-left: 5px;
+    text-decoration: none;
+  }
+  ul {
+    margin-top: 25px;
+    margin-right: 26px;
+    list-style-type: none;
+    font-size: 20px;
+    text-align: right;
+    line-height: 4;
+    color: blueviolet;
+  }
+  .principal {
+    background-color: rgb(34, 175, 183, 0.1);
+    margin-top: 10px;
+    max-width: 80%;
+    border-radius: 8px;
+  }
+  .city {
+    margin: 0px 40px 0px;
+    font-size: 40px;
+  }
+  .day {
+    margin: 5px 40px 20px;
+    font-size: 22px;
+    opacity: 0.6;
+  }
+  .today {
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .clearfix {
+    margin: 35px 30px auto 0px;
+  }
+  .emoji {
+    font-size: 70px;
+    margin: 0px 35px;
+    text-align: center;
+  }
+  .other-days {
+    font-size: 30px;
+    text-align: center;
+  }
+  .degrees {
+    font-size: 18px;
+    opacity: 0.6;
+  }
+  #precipitation {
+    margin: 0px 65px 25px 40px;
+    font-size: 20px;
+    color: grey;
+    line-height: 14px;
+    border: rgb(34, 175, 183, 0.8);
+    background-color: rgb(34, 175, 183, 0);
+  }
+  #celcius {
+    display: inline;
+  }
+  #fahrenheit {
+    display: inline;
+  }
