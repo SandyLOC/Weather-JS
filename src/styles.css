@@ -65,6 +65,11 @@ body {
     font-size: 18px;
     opacity: 0.6;
   }
+  .codedby {
+    text-align: center;
+    margin-right:15%;
+    font-size: 13px;
+  }
   #precipitation {
     margin: 0px 65px 25px 40px;
     font-size: 20px;
@@ -78,4 +83,8 @@ body {
   }
   #fahrenheit {
     display: inline;
+  }
+  #codedby {
+    text-align: center;
+    font-size: 13px;
   }
