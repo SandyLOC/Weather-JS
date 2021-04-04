@@ -13,10 +13,9 @@
 
 <body>
   <div class="container">
-    <div class="card principal">
+    <div class="card principal" style="width: 45rem">
       <div class="row">
-        <div class="col-sm-9">
-
+        <div class="col-sm-10">
           <div class="card-body">
             <form>
               <div class="row">
@@ -34,16 +33,24 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-6">
               <div>
                 <h1 class="city" id=#city>Search...</h1>
                 <h2 class="day"></h2>
               </div>
-              <div class="card" id="precipitation">
+              <div class="card" id="data">
                 <div class="card-body">
-                  <p class="precipitation">Precipitation: 0%</p>
-                  <p class="wind">Wind: 0 Km/h</p>
-                  <p class="humid">Humidity: 0%</p>
+                  <ul id="data">
+                    <li>
+                    <span class="description">-</span>
+                    </li>
+                    <li>
+                      Wind: <span class="wind">0</span> Km/h
+                    </li>
+                    <li>
+                      Humidity: <span class="humid">0</span>%
+                    </li>
+                </ul>
                 </div>
               </div>
             </div>
@@ -53,7 +60,7 @@
                 <span class="today" id=#today>0</span>
                 <span>
                   <a href="#" ><p id="celcius">°C |</p><p id="fahrenheit"> °F</p></a>
-                  <h1><i class="fas fa-cloud-sun emoji"></i>
+                  <h1><image src="http://openweathermap.org/img/wn/10d@2x.png" alt="clear" id="icon1"/>
                 </span>
               </div>    
             </div>
@@ -61,7 +68,7 @@
         </div>
 
         <div class="col popular">
-          <ul>
+          <ul class="popular">
             <li>New York</li>
             <li>Shanghai</li>
             <li>Sidney</li>
@@ -73,7 +80,7 @@
     <div class="card other-days">
       <div class="card-footer">
         <div class="row">
-          <div class="col">Mon </br><i class="fas fa-cloud-sun-rain"></i>
+          <div class="col">Mon </br><i class="fas fa-cloud-sun"></i>
             <p class="degrees">17°C</p>
           </div>
           <div class="col">Tue </br><i class="fas fa-cloud-sun"></i>

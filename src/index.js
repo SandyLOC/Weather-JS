@@ -17,9 +17,6 @@ function getTemp(latitude, longitude, units) {
   return axios.get(`${apiUrl}&appid=${apiKey}`).then((response) => {
     return {
       name: response.data.name,
-      temperature: response.data.main.temp,
-      humidity: response.data.main.humidity,
-      wind: response.data.wind.speed
     };
   });
 }
@@ -33,31 +30,29 @@ function showCurrent(event) {
   navigator.geolocation.getCurrentPosition((position) => {
     let { latitude, longitude } = getCoords(position);
     getTemp(latitude, longitude, units).then((location) => {
-      let cityName = document.querySelector(".city");
-      cityName.innerHTML = location.name;
+      document.querySelector(".city").innerHTML = location.name;
       getValues(location.name);
     });
   });
 }
 //Write data of city on the screen
 function showTemperature(response) {
+  document.querySelector(".city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
-  console.log(temperature);
-  let viewTemperature = document.querySelector(".today");
-  viewTemperature.innerHTML = temperature;
-  let viewHumidity = document.querySelector(".humid");
-  viewHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  let vieWind = document.querySelector(".wind");
-  vieWind.innerHTML = `Wind: ${response.data.wind.speed} Km/h`;
+  document.querySelector(".today").innerHTML = temperature;
+  let iconPrincipal = document.querySelector("#icon1");
+  iconPrincipal.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconPrincipal.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML = response.data.weather[0].description;
+  document.querySelector(".humid").innerHTML = response.data.main.humidity;
+  document.querySelector(".wind").innerHTML = response.data.wind.speed;
 }
 
 function showValue(event) {
   event.preventDefault();
   let form = document.querySelector(".form-control");
-  let cityName = document.querySelector(".city");
   let reset = document.querySelector("form");
   let city = form.value;
-  cityName.innerHTML = city;
   getValues(city);
   reset.reset();
 }
@@ -85,3 +80,5 @@ let fahrenheit = document.querySelector("#fahrenheit");
 
 showCelcius.addEventListener("click", getCelcius);
 fahrenheit.addEventListener("click", getFahrenheit);
+
+getValues("New York");

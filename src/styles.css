@@ -21,16 +21,11 @@ body {
     text-decoration: none;
   }
   ul {
-    margin-top: 25px;
-    margin-right: 26px;
     list-style-type: none;
-    font-size: 20px;
-    text-align: right;
-    line-height: 4;
     color: blueviolet;
   }
   .principal {
-    background-color: rgb(34, 175, 183, 0.1);
+    background-color: rgba(164, 236, 240, 0.1);
     margin-top: 10px;
     max-width: 80%;
     border-radius: 8px;
@@ -67,16 +62,28 @@ body {
   }
   .codedby {
     text-align: center;
-    margin-right:15%;
+    margin-right:30%;
     font-size: 13px;
   }
-  #precipitation {
-    margin: 0px 65px 25px 40px;
-    font-size: 20px;
+  .popular{
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 15px;
+    margin-left: 0px;
+    font-size: 18px;
+    text-align: right;
+    line-height: 4;
+    padding-left: 0;
+  }
+  #data {
+    text-align: left;
+    margin: 0px 35px 25px 0px;
+    font-size: 18px;
     color: grey;
-    line-height: 14px;
+    line-height: 25px;
     border: rgb(34, 175, 183, 0.8);
     background-color: rgb(34, 175, 183, 0);
+    list-style-type: none;
   }
   #celcius {
     display: inline;
@@ -85,6 +92,6 @@ body {
     display: inline;
   }
   #codedby {
-    text-align: center;
+    margin-left: 5px;
     font-size: 13px;
   }
