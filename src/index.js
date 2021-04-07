@@ -38,7 +38,8 @@ function showCurrent(event) {
 //Write data of city on the screen
 function showTemperature(response) {
   document.querySelector(".city").innerHTML = response.data.name;
-  let temperature = Math.round(response.data.main.temp);
+  celciusTemp = response.data.main.temp;
+  let temperature = Math.round(celciusTemp);
   document.querySelector(".today").innerHTML = temperature;
   let iconPrincipal = document.querySelector("#icon1");
   iconPrincipal.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -63,22 +64,24 @@ search.addEventListener("submit", showValue);
 let current = document.querySelector(".current");
 current.addEventListener("click", showCurrent);
 //Units
-let c = true;
-let f = false;
 function getCelcius() {
   let todayTemp = document.querySelector(".today");
-  let toCelcius = Math.round(((todayTemp.innerHTML - 32) * 5) / 9);
-  todayTemp.innerHTML = toCelcius;
+  todayTemp.innerHTML = Math.round(celciusTemp);
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 function getFahrenheit() {
   let todayTemp = document.querySelector(".today");
-  let toFaranheit = Math.round((todayTemp.innerHTML * 9) / 5 + 32);
+  let toFaranheit = Math.round((celciusTemp * 9) / 5 + 32);
   todayTemp.innerHTML = toFaranheit;
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
-let showCelcius = document.querySelector("#celcius");
-let fahrenheit = document.querySelector("#fahrenheit");
 
-showCelcius.addEventListener("click", getCelcius);
-fahrenheit.addEventListener("click", getFahrenheit);
+let celciusTemp = null;
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", getCelcius);
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", getFahrenheit);
 
 getValues("New York");

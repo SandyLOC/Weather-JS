@@ -52,6 +52,17 @@ body {
     margin: 0px 35px;
     text-align: center;
   }
+  .units{
+    position:relative;
+    top: -30px;
+  }
+  .active {
+    color:#22afb7;
+  }
+  .active:hover {
+    cursor:default;
+    color:#22afb7;
+  }
   .other-days {
     font-size: 30px;
     text-align: center;
@@ -90,6 +101,7 @@ body {
   }
   #fahrenheit {
     display: inline;
+    margin-left: 0px;
   }
   #codedby {
     margin-left: 5px;
