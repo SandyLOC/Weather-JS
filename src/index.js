@@ -43,8 +43,11 @@ function showTemperature(response) {
   document.querySelector(".today").innerHTML = temperature;
   let iconPrincipal = document.querySelector("#icon1");
   iconPrincipal.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconPrincipal.setAttribute("alt", response.data.weather[0].description);
-  document.querySelector(".description").innerHTML = response.data.weather[0].description;
+  let weatherDescription = response.data.weather[0].description;
+  iconPrincipal.setAttribute("alt", weatherDescription);
+  let showDescription = weatherDescription[0].toUpperCase() + 
+  weatherDescription.slice(1);
+  document.querySelector(".description").innerHTML = showDescription;
   document.querySelector(".humid").innerHTML = response.data.main.humidity;
   document.querySelector(".wind").innerHTML = response.data.wind.speed;
 }
