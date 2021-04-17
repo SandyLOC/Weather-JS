@@ -1,6 +1,7 @@
 let apiKey = "73b2674189dd157fb1ec3b25880baefd";
 let units = "metric";
 //Write data of geolocation on the screen
+
 function getCoords(position) {
   let latitude = position.coords.latitude;
   console.log(latitude);
@@ -88,3 +89,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", getFahrenheit);
 
 getValues("New York");
+displayForecast();

@@ -25,7 +25,7 @@ body {
     color: blueviolet;
   }
   .principal {
-    background-color: rgba(164, 236, 240, 0.1);
+    background-color: rgba(230, 244, 245, 0.1);
     margin-top: 10px;
     max-width: 80%;
     border-radius: 8px;
@@ -63,9 +63,13 @@ body {
     cursor:default;
     color:#22afb7;
   }
-  .other-days {
+  .forecast {
     font-size: 30px;
     text-align: center;
+  }
+  .forecast-temperature{
+    font-size: 18px;
+    opacity: 0.6;
   }
   .degrees {
     font-size: 18px;
