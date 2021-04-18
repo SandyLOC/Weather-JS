@@ -20,10 +20,9 @@ function displayForecast(response) {
     forecastHTML = forecastHTML + `</div>`;
     forecastScreen.innerHTML = forecastHTML;
 }
-function sendCoords(coordinates){
-    console.log(coordinates);
+function sendCoords(coordinates, units){
     let latit = coordinates.lat;
     let longit = coordinates.lon;
-let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latit}&lon=${longit}&exclude=hourly,minutely&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latit}&lon=${longit}&exclude=hourly,minutely&units=${units}`;
 axios.get(`${apiUrl}&appid=${apiKey}`).then(displayForecast);
 }
