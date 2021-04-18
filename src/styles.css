@@ -36,7 +36,7 @@ body {
   }
   .day {
     margin: 5px 40px 20px;
-    font-size: 22px;
+    font-size: 18px;
     opacity: 0.6;
   }
   .today {
@@ -84,7 +84,7 @@ body {
   }
   .codedby {
     text-align: center;
-    margin-right:35%;
+    margin-right:37%;
     font-size: 13px;
   }
   #data {

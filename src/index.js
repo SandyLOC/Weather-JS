@@ -51,7 +51,13 @@ function showTemperature(response) {
   weatherDescription.slice(1);
   document.querySelector(".description").innerHTML = showDescription;
   document.querySelector(".humid").innerHTML = response.data.main.humidity;
-  document.querySelector(".wind").innerHTML = response.data.wind.speed;
+  let windUnits = null;
+  if (units == "metric") {
+  windUnits = "Km/h";
+  } else {
+  windUnits = "Mi/h";
+  }
+  document.querySelector(".wind").innerHTML = `${response.data.wind.speed} ${windUnits}`;
   sendCoords(response.data.coord, units);
 }
 

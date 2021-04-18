@@ -17,7 +17,7 @@ function getTime(date) {
     if (minutes < 10) {
       minutes = `0${minutes}`;
     }
-    return `${daysWeek[day]} ${hour}:${minutes}`;
+    return `Last updated: ${daysWeek[day]} ${hour}:${minutes}`;
   }
   let date = new Date();
   let dayVisual = document.querySelector(".day");
