@@ -1,3 +1,12 @@
+let daysWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
 function getTime(date) {
     let day = date.getDay();
     let hour = date.getHours();
@@ -8,18 +17,14 @@ function getTime(date) {
     if (minutes < 10) {
       minutes = `0${minutes}`;
     }
-    let daysWeek = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ];
     return `${daysWeek[day]} ${hour}:${minutes}`;
   }
   let date = new Date();
   let dayVisual = document.querySelector(".day");
   dayVisual.innerHTML = getTime(date);
-  
+//forecast date formatting
+  function formatDay(timestamp) {
+    let forecastDate = new Date(timestamp * 1000);
+    let day = forecastDate.getDay();
+    return daysWeek[day];
+  }

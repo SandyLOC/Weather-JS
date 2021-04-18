@@ -17,7 +17,7 @@ function getTemp(latitude, longitude, units) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}`;
   return axios.get(`${apiUrl}&appid=${apiKey}`).then((response) => {
     return {
-      name: response.data.name,
+      name: response.data.name
     };
   });
 }
@@ -51,6 +51,7 @@ function showTemperature(response) {
   document.querySelector(".description").innerHTML = showDescription;
   document.querySelector(".humid").innerHTML = response.data.main.humidity;
   document.querySelector(".wind").innerHTML = response.data.wind.speed;
+  sendCoords(response.data.coord);
 }
 
 function showValue(event) {
@@ -89,4 +90,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", getFahrenheit);
 
 getValues("New York");
-displayForecast();

@@ -25,9 +25,9 @@ body {
     color: blueviolet;
   }
   .principal {
-    background-color: rgba(230, 244, 245, 0.1);
+    background-color: rgba(239, 244, 245, 0.1);
     margin-top: 10px;
-    max-width: 80%;
+    max-width: 100%;
     border-radius: 8px;
   }
   .city {
@@ -64,12 +64,19 @@ body {
     color:#22afb7;
   }
   .forecast {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
+    padding: 6px;
+    background-color: rgb(34, 175, 183, 0.0);
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  .forecast-min {
+    opacity: 0.6;
   }
   .forecast-temperature{
     font-size: 18px;
-    opacity: 0.6;
   }
   .degrees {
     font-size: 18px;
@@ -77,22 +84,12 @@ body {
   }
   .codedby {
     text-align: center;
-    margin-right:30%;
+    margin-right:35%;
     font-size: 13px;
-  }
-  .popular{
-    width: 100%;
-    margin-top: 0px;
-    margin-right: 15px;
-    margin-left: 0px;
-    font-size: 18px;
-    text-align: right;
-    line-height: 4;
-    padding-left: 0;
   }
   #data {
     text-align: left;
-    margin: 0px 35px 25px 0px;
+    margin: 0px 35px 20px 0px;
     font-size: 18px;
     color: grey;
     line-height: 25px;
