@@ -8,7 +8,7 @@ function displayForecast(response) {
         `
         <div class="col dailyForecast">
           <div class="forecast-date">${formatDay(day.dt)}</div>
-          <image src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="clear"/>
+          <image src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="clear"/>
          <div class="forecast-temperature">
           <span class="forecast-max">${Math.round(day.temp.max)}°</span>
           <span class="forecast-min">${Math.round(day.temp.min)}°</span>

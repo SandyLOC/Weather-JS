@@ -1,4 +1,4 @@
-let apiKey = "73b2674189dd157fb1ec3b25880baefd";
+let apiKey = "c8e5c863fd58a7ff2509f0046e2f8c3e";
 let units = "metric";
 //Write data of geolocation on the screen
 
@@ -44,7 +44,7 @@ function showTemperature(response) {
   let temperature = Math.round(celciusTemp);
   document.querySelector(".today").innerHTML = temperature;
   let iconPrincipal = document.querySelector("#icon1");
-  iconPrincipal.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconPrincipal.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   let weatherDescription = response.data.weather[0].description;
   iconPrincipal.setAttribute("alt", weatherDescription);
   let showDescription = weatherDescription[0].toUpperCase() + 
@@ -93,10 +93,10 @@ function getCelcius() {
 }
 function getFahrenheit() {
   units = "imperial";
-  //forecastUnits = units;
-//  let todayTemp = document.querySelector(".today");
-//  let toFaranheit = Math.round((celciusTemp * 9) / 5 + 32);
-//  todayTemp.innerHTML = toFaranheit;
+  forecastUnits = units;
+  let todayTemp = document.querySelector(".today");
+  let toFaranheit = Math.round((celciusTemp * 9) / 5 + 32);
+  todayTemp.innerHTML = toFaranheit;
   celciusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let city = document.querySelector(".city");
