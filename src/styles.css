@@ -1,5 +1,6 @@
 body {
     color: #22afb7;
+    background-color: rgba(239, 244, 245, 0.8);
   }
   form {
     margin: 10px 0px 0px;
@@ -27,8 +28,8 @@ body {
   .principal {
     background-color: rgba(239, 244, 245, 0.1);
     margin-top: 10px;
-    max-width: 100%;
     border-radius: 8px;
+    width: 60%;
   }
   .city {
     margin: 0px 40px 0px;
@@ -84,7 +85,6 @@ body {
   }
   .codedby {
     text-align: center;
-    margin-right:37%;
     font-size: 13px;
   }
   #data {
@@ -107,4 +107,9 @@ body {
   #codedby {
     margin-left: 5px;
     font-size: 13px;
+  }
+  @media (max-width:992px) {
+    .principal {
+      width: 90%;
+    }
   }
