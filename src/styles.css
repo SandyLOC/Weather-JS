@@ -14,7 +14,7 @@ body {
     border-radius: 5px;
     height: 90%;
     margin-top: 2px;
-    padding: 5px 20px;
+    padding: 5px 10px;
   }
   a {
     font-size: 20px;
@@ -110,6 +110,6 @@ body {
   }
   @media (max-width:992px) {
     .principal {
-      width: 90%;
+      width: 80%;
     }
   }
